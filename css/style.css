@@ -402,6 +402,7 @@ footer p {
     margin-top: 3vh;
     padding-top: 0px;
     margin-bottom: 0px;
+    justify-content: center;
 }
 
 footer {
