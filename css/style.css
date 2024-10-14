@@ -21,16 +21,12 @@ nav {
     padding-left: 0 !important;
 }
 
-.nav-link:hover {
-    color: #eb2f96;
-}
-
 .active {
     color: white;
 }
 
-.active:hover {
-    color: white;
+.nav-link:hover, .active:hover {
+    color: #eb2f96 !important; 
 }
 
 .fixed {
@@ -259,8 +255,9 @@ div .noPad strong {
     font-size: 18px; 
 }
 .projectHeader {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .iframeContainer {
