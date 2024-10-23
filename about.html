@@ -19,25 +19,36 @@
         <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <style>
-        .links-container {
-            text-align: left;
-            margin-top: 10px;
-        }
         .links-container a {
             display: inline-block;
             margin: 10px 10px;
             padding: 10px 20px;
-            color: #ffffff;
-            background-color: rgba(235, 47, 150, 0.8);
-            border: none;
-            border-radius: 5px;
+            color: #fefefe;
+            background: radial-gradient(circle at center, #0073ff 0%, #004080 100%);
+            border: 2px solid #449dbd;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 20px;
-            transition: background-color 0.5s ease;
+            font-family: 'Ubuntu';
+            transition: color 0.8s ease-in-out 2s, background-color 0.8s ease-in-out 3s, border-color 0.8s;
+            background-size: 100% 100%;
+            background-position: center;
+            cursor: pointer;
         }
         .links-container a:hover {
-            background-color: rgba(235, 47, 150, 1);
-            text-decoration: none;
+            color: #fefefe;
+            border-color: #9f379b;
+            background: radial-gradient(circle at center, #e94fe3 0%, #40163f 100%);
+        }
+        @keyframes backgroundExpand {
+            0% {
+                background-size: 100% 100%;
+                background: radial-gradient(circle, #0073ff, #004080);
+            }
+            100% {
+                background-size: 150% 150%;
+                background: radial-gradient(circle, #e94fe3, #40163f);
+            }
         }
     </style>
     </head>
@@ -88,7 +99,7 @@
 
 
                         <h1 class="aboutHeader" font-size: 26px> Emma Cheriegate </h1>
-                        <h2 class="subHeader" style="color: #eb2f96; font-size: 22px"> Earth Systems Scientist | Remote Sensing & Climate Change </h2>
+                        <h2 class="subHeader" style="color: #d6429c; font-size: 22px"> Earth Systems Scientist | Remote Sensing & Climate Change </h2>
                         <div class="headerBar"></div>
 
                         <p id="aboutP" font-size: 28px>
