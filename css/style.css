@@ -1,12 +1,12 @@
 html, body {
     background-color: #080808 !important;
     color: white;
-    font-family: 'Ubuntu', sans-serif !important;
+    font-family: 'Ubuntu' !important;
     scroll-behavior: smooth;
 }
 
 p, h5 {
-    font-family: 'Bitter', serif;
+    font-family: 'Ubuntu';
 }
 
 /*/////////////////// Nav Styles ///////////////////*/
@@ -26,7 +26,7 @@ nav {
 }
 
 .nav-link:hover, .active:hover {
-    color: #eb2f96 !important; 
+    color: #d938a5 !important; 
 }
 
 .fixed {
@@ -51,7 +51,7 @@ header {
 .brand h5 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-family: 'Ubuntu', sans-serif !important;
+    font-family: 'Ubuntu' !important;
 }
 
 .navbar-nav {
@@ -61,6 +61,8 @@ header {
 .navbar {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /*///////////////Portfolio///////////////*/
@@ -344,7 +346,13 @@ iframe {
     text-align: center;
 }
 
-#cover h1, h2 {
+#cover h1 {
+    color:#ffffff !important;
+    font-size: 55px;
+    font-family: 'Ubuntu' !important;
+}
+
+#cover h2 {
     text-shadow: 5px 5px 5px black;
     font-size: 55px;
     font-family: 'Ubuntu' !important;
@@ -581,7 +589,7 @@ footer a:hover {
     .contentContainer .subHeader {
         margin-top: 40px !important;
         margin-bottom: 1.5vh;
-        color: #eb2f96 !important;
+        color: #d938a5 !important;
         font-size: 18px !important;
         font-weight: normal;
     }
@@ -599,6 +607,7 @@ footer a:hover {
     }
 
     #cover h1, h2 {
+        color:#d938a5 !important;
         font-size: 1.75rem !important;
     }
 
@@ -621,25 +630,38 @@ footer a:hover {
     .col-md-9 {
         padding-right: 0 !important;
     }
-
-
-            .links-container {
-            text-align: left;
-            margin-top: 10px;
+    .links-container {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .links-container a {
+        display: inline-block;
+        margin: 10px 10px;
+        padding: 10px 20px;
+        color: #fefefe;
+        background: radial-gradient(circle at center, #0073ff 0%, #004080 100%);
+        border: 2px solid #449dbd;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: 'Ubuntu';
+        transition: color 0.8s ease-in-out 2s, background-color 0.8s ease-in-out 3s, border-color 0.8s;
+        background-size: 100% 100%;
+        background-position: center;
+        cursor: pointer;
+    }
+    .links-container a:hover {
+        color: #fefefe;
+        border-color: #9f379b;
+        background: radial-gradient(circle at center, #e94fe3 0%, #40163f 100%);
+    }
+    @keyframes backgroundExpand {
+        0% {
+            background-size: 100% 100%;
+            background: radial-gradient(circle, #0073ff, #004080);
         }
-        .links-container a {
-            display: inline-block;
-            margin: 10px 10px;
-            padding: 10px 20px;
-            color: #ffffff;
-            background-color: rgba(235, 47, 150, 0.8);
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 20px;
-            transition: background-color 0.5s ease;
+        100% {
+            background-size: 150% 150%;
+            background: radial-gradient(circle, #e94fe3, #40163f);
         }
-        .links-container a:hover {
-            background-color: rgba(235, 47, 150, 1);
-            text-decoration: none;
-        }
+    }
