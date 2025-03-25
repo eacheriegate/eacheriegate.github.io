@@ -1,5 +1,7 @@
-# Emma Cheriegate
+## Hi there 👋
 
-Welcome to my remote sensing and GIS portfolio! I like to study and visualize changes in environmental systems with earth observation data. 
+Welcome to my portfolio! 🌏🔭🌱
 
-Please check out my [website](https://eacheriegate.github.io) to see more.
+Many of my projects are in development for upcoming publications. Updates coming soon! Take a look at my [portfolio](https://eacheriegate.github.io) and [LinkedIn](https://www.linkedin.com/in/eacheriegate/) for the latest updates.
+
+
