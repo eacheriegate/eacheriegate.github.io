@@ -254,15 +254,25 @@ h2 {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
-
   transition: transform 0.3s ease;
 }
 
 .gallery-item img:hover {
   transform: scale(1.03);
 }
+.single-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
 
-
+.single-gallery img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -286,7 +296,7 @@ h2 {
 
 .project-card img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 4 / 3; 
   border-radius: 8px;
   object-fit: fill;
 }
@@ -429,7 +439,7 @@ h2 {
    📦 10. CONTENT CONTAINERS
 =================================== */
 .content-narrow {
-  max-width: 1780px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 1rem;
   text-align: center;
