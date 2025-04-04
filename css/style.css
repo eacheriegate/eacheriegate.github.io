@@ -37,30 +37,30 @@ p {
 }
 
 /* ===================================
-   🧭 3. NAVBAR
+   🧱 3. NAVBAR
 =================================== */
 .navbar {
   position: absolute;
-  top: 3rem;
+  margin-top: 2rem;
+  left: 0;
   width: 100%;
-  background: none;
+  background: transparent;
   padding: 1rem 2rem;
   z-index: 1000;
 }
 
 .nav-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1800px;
-  gap: 1.5rem;
+  max-width: 1700px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .nav-logo {
   font-family: 'EB Garamond', serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 300;
   color: #333;
   text-decoration: none;
@@ -69,7 +69,7 @@ p {
 .nav-links a {
   font-family: 'Montserrat', sans-serif;
   margin-left: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: #333;
   font-weight: 400;
@@ -79,17 +79,33 @@ p {
 .nav-links a:hover {
   color: #0077cc;
 }
+/* Default desktop layout */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-right: 4rem;
+}
 
 /* Dark nav variant for project pages */
 body.dark-nav .navbar a,
 body.dark-nav .nav-logo {
   color: white;
 }
-.nav-links {
-  display: flex;
-  align-items: center;
-  padding-right: 4rem;
+
+body.dark-nav .nav-links a:hover {
+  color: #d6429c;
 }
+
 body.dark-nav .nav-links a:hover {
   color: #d6429c;
 }
@@ -129,13 +145,13 @@ body.dark-nav .nav-links a:hover {
 }
 
 .hero-gif h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-gif p {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1.75;
   color: white;
   max-width: 900px;
@@ -178,32 +194,34 @@ h2 {
   background-size: cover;
   background-position: center;
   height: 60vh;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero-overlay {
   background: rgba(0, 0, 0, 0.5);
-  padding: 3rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   color: #fff;
-  max-width: 800px;
+  max-width: 900px;
+  width: 90%;
+  border-radius: 12px;
   margin: 0 auto;
-  border-radius: 8px;
-  margin-top: 5rem;
+  box-sizing: border-box;
 }
-
 .hero-overlay h1 {
-  font-size: 2.8rem;
-  font-family: 'EB Garamond', serif;
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-overlay p {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.6;
   color: #fff;
+
 }
 
 .project-content h2 {
@@ -237,8 +255,10 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem auto;     
+  max-width: 1000px;
   justify-content: center;
+  padding: 0 1rem;   
 }
 
 .gallery-item {
@@ -278,7 +298,7 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   justify-items: center;
-  max-width: 2100px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -304,7 +324,7 @@ h2 {
 .project-title {
   margin-top: 0.75rem;
   font-family: 'EB Garamond', serif;
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   text-align: center;
 }
 /* ===================================
@@ -365,11 +385,10 @@ h2 {
   border-radius: 999px;
   background-color: transparent;
   color: #d6429c;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'EB Garamond', serif;
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1.5rem;
 }
 
 .links-container a:hover {
@@ -445,12 +464,12 @@ h2 {
   text-align: center;
 }
 .content-narrow h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 3rem;
   font-weight: 300;
 }
 .content-narrow p {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 .project-content ul {
   padding-left: 1.5rem;
@@ -476,7 +495,7 @@ h2 {
 }
 
 .feature-box h3 {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -530,7 +549,7 @@ footer i {
   .navbar {
     position: static;
     padding: 1rem 1.5rem;
-    background-color: transparent;
+    background-color: white;
   }
 
   .nav-container {
@@ -555,6 +574,47 @@ footer i {
     width: 100%;
     text-align: center;
     margin: 0;
+  }
+}
+  .nav-logo,
+  .nav-links a {
+    color: 111; /* Ensure text is visible on the dark background */
+  }
+
+  .nav-links a:hover {
+    color: #d6429c; /* Optional: keep your hover color */
+  }
+}
+/* Mobile layout */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-logo {
+    color: white;
+  }
+
+  .nav-links a {
+    color: white;
   }
 }
 
