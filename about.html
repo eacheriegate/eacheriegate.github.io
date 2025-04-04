@@ -1,144 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Name index so that when updating to server, it knows which is the main page of the site-->
-    <head>
-    <link rel="remote_sensing_icon_180x180" sizes="180x180" href="../lib/remotesensing_icon_180x180.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../lib/remotesensing_icon_32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../lib/remotesensing_icon_16x16.png">
-    <link rel="manifest" href="../lib/site.webmanifest">
-
-        <title>About Emma</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-     <!--Fonts:-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <style>
-        .links-container a {
-            display: inline-block;
-            margin: 10px 10px;
-            padding: 10px 20px;
-            color: #fefefe;
-            background: radial-gradient(circle at center, #0073ff 0%, #004080 100%);
-            border: 2px solid #449dbd;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 20px;
-            font-family: 'Ubuntu';
-            transition: color 0.8s ease-in-out 2s, background-color 0.8s ease-in-out 3s, border-color 0.8s;
-            background-size: 100% 100%;
-            background-position: center;
-            cursor: pointer;
-        }
-        .links-container a:hover {
-            color: #fefefe;
-            border-color: #9f379b;
-            background: radial-gradient(circle at center, #e94fe3 0%, #40163f 100%);
-        }
-        @keyframes backgroundExpand {
-            0% {
-                background-size: 100% 100%;
-                background: radial-gradient(circle, #0073ff, #004080);
-            }
-            100% {
-                background-size: 150% 150%;
-                background: radial-gradient(circle, #e94fe3, #40163f);
-            }
-        }
-    </style>
-    </head>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Emma Cheriegate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+</head>
 <body>
 
-    <div class="mainContainer">
-        <header>
-                <nav class="navbar navbar-expand" id="intro">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav" id="largerDevices">
-                        <a class="nav-link active" href="https://eacheriegate.github.io/index.html#anchor">PORTFOLIO</a>
-                        <a class="nav-link" href="https://eacheriegate.github.io/about.html">ABOUT</a>
-                        <a class="nav-link" href="https://drive.google.com/file/d/1h4HCtrd1qFe4hU3DbG2O3T_GJLsOeBOU/view?usp=sharing">RESUME</a>
-                        <a class="nav-link" href="https://drive.google.com/file/d/1QW2Y54zivAhFyH3R-mvO0ukHKwb30C0o/view?usp=sharing">CV</a>
-                    </div>
-                        <div class="brand">
-                            <h5><a href="https://eacheriegate.github.io/index.html#anchor" class="nav-link">Emma Cheriegate</a></h5>
-                        </div>
-                        <div class="navbar-nav" id="mobileDevices">
-                            <a class="nav-link" href="index.html#anchor">
-                                <span>Portfolio</span>
-                            </a>
-                            <a class="nav-link active" href="about.html">
-                                <span>About</span>
-                            </a>
-                             <a class="nav-link" href=""https://drive.google.com/file/d/1jYSSloxeomBHtU_Qu7dI2fZmudj02_OP/view?usp=sharing"">
-                                <span>Resume</span>
-                            </a>
-                        </div>
-                    </div>     
-        
-                </nav>
-            </header>
-
-            <div class="contentContainer">
-                <div class="row">
-                    <div class="col-md-3 order-md-last padBot" id="selfieDiv">
-                        <img class="selfie" src="Images/headshot2024.jpg">
-                    </div>
-
-
-
-                    <div class="col-md-9 order-md-first">
-
-
-
-
-
-                        <h1 class="aboutHeader" font-size: 26px> Emma Cheriegate </h1>
-                        <h2 class="subHeader" style="color: #d6429c; font-size: 22px"> Earth Systems Scientist | Remote Sensing & Climate Change </h2>
-                        <div class="headerBar"></div>
-
-                        <p id="aboutP" font-size: 28px>
-                             <p>Welcome! I am an earth systems scientist specializing in remote sensing and geospatial analysis.<p>
-                             <p>My passion lies in unraveling the mysteries of environmental change – analyzing and predicting these shifts to understand the intricate feedback loops within Earth's ecosystems to support informed decision-making around climate change.<p>
-                             <p>I use satellite imagery and GIS in Python/R/JavaScript to generate valuable scientific insights and communicate them succinctly for a broad impact.</p>
-                             <p>I am always interested in connecting with creative minds who share a similar passion. If that's you, please reach out.</p>
-                             <br>
-                             <p>P.S.... I spent a season crafting articles about water-related topics for high school students. Click the link below to explore them!</p>
-                            <div class="links-container">
-                            <a href="https://savethewater.org/?post_types=post%2Cpage&s=emma+cheriegate" class="btn btn-primary">READ MY ARTICLES</a>
-                            <a href="https://drive.google.com/file/d/1h4HCtrd1qFe4hU3DbG2O3T_GJLsOeBOU/view?usp=sharing" class="btn btn-primary">VIEW MY ONE-PAGE RESUME</a>
-                            <a href="https://drive.google.com/file/d/1QW2Y54zivAhFyH3R-mvO0ukHKwb30C0o/view?usp=sharing" class="btn btn-primary">VIEW MY CV</a>
-                        </div>
-                    </div>
-                </div>  
-            </div>
-
-            <div class="filler">
-            </div>
-
-        
-        <!-- // Footer & contact info -->
-        <footer>
-
-                <div class="text-center" role="contentinfo">
-                
-                <a href="https://x.com/eacheriegate" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class='sr-only'>Twitter</span></a>
-                <a href="https://www.linkedin.com/in/EmmaCheriegate" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class='sr-only'>Linkedin</span></a>
-                <a href="https://github.com/eacheriegate" target="_blank"> <i class="fab fa-github fa-2x"></i><span class='sr-only'>GitHub</span></a>
-                <p><i class="fas fa-copyright"></i></i><span class='sr-only'></span> 2024 Emma Cheriegate</p>
-                    </div>
-                
-            
-            </footer>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Emma Cheriegate</a>
+        <div class="nav-links">
+          <a href="index.html#projects">PROJECTS</a>
+          <a class="nav-link" href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing">RESUME</a>
+          <a href="about.html">ABOUT</a>
         </div>
-        <script type="text/javascript" src="js/jquery.slim.js"></script>
-        <script type="text/javascript" src="js/scrollMonitor.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-    
-    </body>
-    </html>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="section alt about-section">
+    <div class="content-narrow about-flex">
+      <img src="Images/headshot2024.jpg" alt="Emma Cheriegate headshot">
+      <div class="about-text">
+        <h1>Emma Cheriegate</h1>
+        <h2 class="subHeader">Earth Systems Scientist | Remote Sensing & Climate Change</h2>
+
+        <p>Welcome! I am an earth systems scientist specializing in remote sensing and geospatial analysis.</p>
+        <p>My passion lies in unraveling the mysteries of environmental change – analyzing and predicting these shifts to understand the intricate feedback loops within Earth's ecosystems to support informed decision-making around climate change.</p>
+        <p>I use satellite imagery and GIS in Python/R/JavaScript to generate valuable scientific insights and communicate them succinctly for a broad impact.</p>
+        <p>I am always interested in connecting with creative minds who share a similar passion. If that's you, please reach out.</p>
+        <br>
+        <p>P.S.... I spent a season crafting articles about water-related topics for high school students. Click the link below to explore them!</p>
+
+        <div class="links-container">
+          <a href="https://savethewater.org/?post_types=post%2Cpage&s=emma+cheriegate">READ MY ARTICLES</a>
+          <a href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing">VIEW MY ONE-PAGE RESUME</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center" role="contentinfo">
+      <a href="https://x.com/eacheriegate" target="_blank"><i class="fab fa-twitter fa-2x"></i><span class='sr-only'>Twitter</span></a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i><span class='sr-only'>Linkedin</span></a>
+      <a href="https://github.com/eacheriegate" target="_blank"><i class="fab fa-github fa-2x"></i><span class='sr-only'>GitHub</span></a>
+      <p><i class="fas fa-copyright"></i> 2025 Emma Cheriegate</p>
+    </div>
+  </footer>
+
+</body>
+</html>

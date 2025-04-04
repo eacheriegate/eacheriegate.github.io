@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghost Forest Dynamics | Emma Cheriegate</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+</head>
+<body class="dark-nav">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Emma Cheriegate</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">PROJECTS</a>
+        <a href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing" target="_blank">RESUME</a>
+        <a href="../about.html">ABOUT</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="project-hero-image" style="background-image: url('../Images/ghost_forests_img.jpg');">
+    <div class="hero-overlay">
+      <h1>Ghost Forest Dynamics in Coastal Georgia</h1>
+      <p>Tracking 34 years of ecological shifts from saltwater intrusion, sea level rise, and groundwater change—now being expanded into a full-length research publication.</p>
+    </div>
+  </section>
+
+  <!-- Background -->
+  <section class="section project-content bg-1">
+    <div class="content-narrow">
+        <h2>Background</h2>
+        <p>Coastal freshwater forested wetlands (CFFWs) along the southeastern U.S. are rapidly transforming under the compounded effects of sea level rise, saltwater intrusion, and groundwater decline. These changes have led to the emergence of “ghost forests”—transitional zones of dead or degraded vegetation.</p>
+        <p>During my time in NASA-JPL’s DEVELOP program, I led a team investigating the long-term vegetation dynamics and environmental drivers of forest decline in the Savannah River watershed. Using 34 years of Landsat satellite data, seasonal vegetation indices (NDVI, EVI), and site-level environmental datasets (e.g., sea level, salinity, groundwater depth), we tracked vegetation stress and land cover change from 1990 to 2024.</p>
+        <p>This project integrates remote sensing and in situ environmental data to better understand climate-driven degradation of coastal ecosystems. I’m currently leading a first-author manuscript based on this project’s findings.</p>        
+    </div>
+  </section>
+
+  <!-- Analyzes -->
+  <section class="section project-content bg-2">
+    <div class="content-narrow">
+      <h2>Analyzes</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>🌿 NDVI Time Series</h3>
+          <p>Assessed long-term vegetation health using Landsat and PlanetScope imagery.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🧠 Sensor Evaluation</h3>
+          <p>Compared NDVI sensitivity across Landsat 7 ETM+, 8 OLI, and RapidEye/Dove sensors.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🌎 Land Cover Classification</h3>
+          <p>Trained random forest models to detect class shifts in vegetation over time.</p>
+        </div>
+        <div class="feature-box">
+          <h3>💧 Porewater Salinity</h3>
+          <p>Analyzed in situ salinity trends alongside vegetative decline to validate SWI correlations.</p>
+        </div>
+      </div>
+
+      <!-- Resource Buttons -->
+      <div class="links-container center">
+        <a href="https://drive.google.com/file/d/1Sy6YNSh1CDaoR2nrx63tdU6-jOF5l6gv/view" target="_blank">VIEW TECH PAPER</a>
+        <a href="https://drive.google.com/file/d/1yJn_IHqQJg2NRsMJKdjgyKJbdLLaWVAI/view" target="_blank">VIEW POSTER</a>
+        <a href="https://drive.google.com/file/d/1PPS4oeLEGO5sn_1W4vz3PLZcPHbMPXr7/view" target="_blank">WATCH PRESENTATION</a>
+      </div>
+    </div>
+  </section>
+<!-- Gallery Section -->
+<section class="section project-content bg-3">
+    <div class="content-narrow">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="../Images/coffee_hour_group.jpg" alt="Coffee Hour Presentation"
+               data-caption="Presenting at Penn State Geography’s Coffee Hour">
+        </div>
+        <div class="gallery-item">
+          <img src="../Images/SWI_GF_studysite.png" alt="Study Site Map"
+               data-caption="Study site boundary for SWI & ghost forest analysis">
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center" role="contentinfo">
+      <a href="https://x.com/eacheriegate" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+      <a href="https://github.com/eacheriegate" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p style="margin-top: 1rem;"><i class="fas fa-copyright"></i> 2025 Emma Cheriegate</p>
+    </div>
+  </footer>
+
+<!-- Lightbox Script -->
+<script>
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+  
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.getAttribute('data-caption');
+      });
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

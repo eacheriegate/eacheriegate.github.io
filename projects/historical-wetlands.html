@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wetland Restoration | Emma Cheriegate</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+</head>
+<body class="dark-nav">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Emma Cheriegate</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">PROJECTS</a>
+        <a href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing" target="_blank">RESUME</a>
+        <a href="../about.html">ABOUT</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="project-hero-image" style="background-image: url('../Images/ag_wetlands.jpg');">
+    <div class="hero-overlay">
+      <h1>Identifying Historical Wetlands</h1>
+      <p>Mapping 4M+ drained wetlands in the Upper Mississippi Basin to support water quality restoration</p>
+    </div>
+  </section>
+
+  <!-- Background Section -->
+  <section class="section project-content bg-1">
+    <div class="content-narrow">
+      <h2>Background</h2>
+      <p>In the agricultural Upper Mississippi Basin (UMRB), nitrogen (N) pollution from excess fertilizer presents an issue for terrestrial and aquatic life. It can contribute to higher nitrate levels in drinking water, oxygen-depleted aquatic zones, and harmful algal blooms.</p>
+      <p>In this NASA- and USDA-funded project, our team turned to wetlands as a nature-based solution due to their capacity to filter excess nutrients. We mapped over 4 million historically drained wetlands using a remote sensing and GIS workflow that integrated digital elevation models, hydrologic patterns, soils, and land cover data.</p>
+      <p>This comprehensive dataset helps policymakers and watershed managers identify priority areas for wetland restoration and supports modeling efforts to assess the water quality benefits of restoration across the basin.</p>
+      <p>We're in the process of writing up this work for publication.</p>
+    </div>
+</section>
+
+  <!-- Analyzes -->
+  <section class="section project-content bg-2">
+    <div class="content-narrow">
+      <h2>Analyzes</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>🗺️ Historical Wetland Mapping</h3>
+          <p>Used DEMs, soil drainage data, and land cover to identify depressional wetlands drained for agriculture.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🧪 Technical Validation</h3>
+          <p>Validated wetland locations using hydric soil data and overlap with NWI-mapped wetlands.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🔍 Spatial Metrics</h3>
+          <p>Assessed wetland loss, nearest neighbor distances, perimeter-area complexity, and size-frequency distribution.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📊 Restoration Targeting</h3>
+          <p>Mapped potentially restorable wetlands on agricultural land to support nutrient pollution mitigation strategies.</p>
+        </div>
+      </div>
+      <!-- Resource Buttons -->
+      <div class="links-container center">
+        <a href="https://drive.google.com/file/d/1jjimeny46sBKljFZPgK1hUhQDGLs0QOa/view" target="_blank">VIEW POSTER</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Gallery Section -->
+<section class="section project-content bg-3">
+    <div class="content-narrow">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <a href="../Images/UMRBspatial_prsnt_post.jpg" data-caption="Presenting at Penn State Geography’s Recognition Reception">
+            <img src="../Images/UMRBspatial_prsnt_post.jpg" alt="Recognition Reception">
+          </a>
+        </div>
+        <div class="gallery-item">
+          <a href="../Images/UMRBdataset_agland.png" data-caption="Characteristics of Agricultural Landscapes in the UMRB. (a) Soil drainage class characteristics based on the gridded SSURGO database at 10m, (b) County-level tile drainage area (m²) density from USDA Census of Agriculture 2022, (c) NLCD 2021 cropland mask downscaled at 10m resolution.">
+            <img src="../Images/UMRBdataset_agland.png" alt="Study Site Map">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" style="display:none;">
+        <span class="lightbox-close" style="cursor:pointer;">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+  
+    document.querySelectorAll('.gallery-item a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const imgSrc = this.getAttribute('href');
+        const caption = this.getAttribute('data-caption');
+        lightboxImg.src = imgSrc;
+        lightboxCaption.textContent = caption || '';
+        lightbox.style.display = 'flex';
+      });
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+      }
+    });
+  </script>
+  
+  
+  <!-- Footer -->
+  <footer>
+    <div class="text-center" role="contentinfo">
+      <a href="https://x.com/eacheriegate" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+      <a href="https://github.com/eacheriegate" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p style="margin-top: 1rem;"><i class="fas fa-copyright"></i> 2025 Emma Cheriegate</p>
+    </div>
+  </footer>
+
+</body>
+</html>

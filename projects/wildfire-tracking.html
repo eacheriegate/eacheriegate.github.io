@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildfire Tracker | Emma Cheriegate</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+</head>
+<body class="dark-nav">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">Emma Cheriegate</a>
+      <div class="nav-links">
+        <a href="../index.html#projects">PROJECTS</a>
+        <a href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing">RESUME</a>
+        <a href="../about.html">ABOUT</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="project-hero-image" style="background-image: url('../Images/cali-fire.jpg');">
+    <div class="hero-overlay">
+      <h1>Tracking Active Wildfires</h1>
+      <p>Leveraging NASA FIRMS, AWS Lambda, and GitHub Actions to serve real-time wildfire data to the public.</p>
+    </div>
+  </section>
+
+  <!-- Background Section -->
+  <section class="section project-content bg-1">
+    <div class="content-narrow">
+      <h2>Background</h2>
+      <p>This personal project automates an Extract, Transform, and Load (ETL) workflow that fetches and visualizes active fire data within Los Angeles County using NASA VIIRS satellite data.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section project-content bg-2">
+    <div class="content-narrow">
+      <h2>Features</h2>
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>🕒 Automated Daily Updates</h3>
+          <p>GitHub Actions runs a cron job every morning at 8 AM PST to fetch and update active wildfire data.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📡 NASA FIRMS Integration</h3>
+          <p>Pulls VIIRS fire detection data directly from NASA’s FIRMS API, ensuring near real-time coverage.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🗂️ Geospatial Clipping</h3>
+          <p>Clips global fire data to Los Angeles County using the county’s official boundary shapefile.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🔄 7-Day Filtering</h3>
+          <p>Filters fire data to display only hotspots detected within the past 7 days for relevancy.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🌐 Coordinate Reprojection</h3>
+          <p>Reprojects all fire data to match LA County's local geographic coordinate reference system.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🗺️ Interactive Web Map</h3>
+          <p>Folium-powered map includes FRP intensity markers, bright_ti4/ti5 heat detection, and toggleable base maps.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📱 Responsive Design</h3>
+          <p>Mobile-first layout adapts smoothly to all screen sizes so users can track fires on any device.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🚀 AWS S3 Hosting</h3>
+          <p>Automatically uploads and serves the latest map version to a public AWS S3 bucket.</p>
+        </div>
+        <div class="feature-box">
+          <h3>🧠 Streamlined ETL Pipeline</h3>
+          <p>Clean separation of Extract, Transform, Load stages improves clarity, maintainability, and automation.</p>
+        </div>
+      </div>
+
+      <div class="links-container center">
+        <a href="https://viirs-active-fire-map.s3.amazonaws.com/fire_interactive_map.html" target="_blank">VIEW WEB MAP</a>
+        <a href="https://github.com/eacheriegate/wildfireTracking_ETL" target="_blank">SEE ON GITHUB</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section project-content bg-3">
+    <div class="content-narrow">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <a href="https://viirs-active-fire-map.s3.amazonaws.com/fire_interactive_map.html" class="gallery-img" target="_blank" rel="noopener noreferrer">
+          <img src="../Images/wildfireTracking_thumbnail.gif" alt="Wildfire Web Map Thumbnail">
+        </a>
+      </div>
+    </div>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+    </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="text-center" role="contentinfo">
+      <a href="https://x.com/eacheriegate" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+      <a href="https://github.com/eacheriegate" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+      <p style="margin-top: 1rem;"><i class="fas fa-copyright"></i> 2025 Emma Cheriegate</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Script -->
+<script>
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.querySelector('.lightbox-close');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+      lightboxCaption.textContent = img.getAttribute('data-caption');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>
