@@ -10,24 +10,64 @@
   <title>Emma Cheriegate | Remotely Sensed Environmental Change</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css?v=2">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-vb43jO41J9r+AX8Ud0hSGqK7r82flp1GqCj2EXW8VRQ6c/UrnI3e6y+i3hxMBI8u3MSb7xv2K+Lg1tJ1tpG1Eg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">Emma Cheriegate</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="nav-links" id="navMenu">
-        <a href="/#projects">PROJECTS</a>
-        <a href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing" target="_blank">RESUME</a>
-        <a href="/about.html">ABOUT</a>
-      </div>
+<!-- Mobile Slide-In Menu -->
+<div class="off-screen-menu" id="mobileMenu">
+  <!-- Make this a flex column container -->
+  <div class="menu-content">
+    <div class="menu-header">
+      <a href="/" class="offscreen-logo">Emma Cheriegate</a>
+      <button class="close-menu" id="closeMenu">&times;</button>
     </div>
-  </nav>
-  
 
+    <!-- Links go here -->
+    <div class="menu-links-wrapper">
+      <ul>
+        <li><a href="/#projects">PROJECTS</a></li>
+        <li><a href="https://drive.google.com/..." target="_blank">RESUME</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer should be INSIDE .menu-content and below everything else -->
+    <div class="footer-icons">
+      <a href="https://x.com/eacheriegate" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/eacheriegate" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Main Nav Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Emma Cheriegate</a>
+
+    <!-- Hamburger Icon -->
+    <div class="ham-menu" id="hamMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Links -->
+    <div class="nav-links desktop-only">
+      <a href="/#projects">PROJECTS</a>
+      <a href="https://drive.google.com/..." target="_blank">RESUME</a>
+      <a href="/about.html">ABOUT</a>
+    </div>
+  </div>
+</nav>
+  
   <!-- Section 1: Hero with GIF Background -->
   <section class="section hero-gif">
     <div class="content-center">
@@ -63,14 +103,7 @@
       <p><i class="fas fa-copyright"></i> 2025 Emma Cheriegate</p>
     </div>
   </footer>
-  <script>
-    const toggle = document.getElementById("navToggle");
-    const menu = document.getElementById("navMenu");
-  
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("show");
-    });
-  </script>
-  
+  <script src="/js/menu.js"></script>
+
 </body>
 </html>

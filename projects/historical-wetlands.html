@@ -9,18 +9,59 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
 </head>
 <body class="dark-nav">
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">Emma Cheriegate</a>
-      <div class="nav-links">
-        <a href="/#projects">PROJECTS</a>     
-        <a class="nav-link" href="https://drive.google.com/file/d/1VBA12CVMSnne_iWsezks411Bti7VkN8-/view?usp=sharing">RESUME</a>
-        <a href="/about.html">ABOUT</a>
-      </div>
+<!-- Mobile Slide-In Menu -->
+<div class="off-screen-menu" id="mobileMenu">
+  <!-- Make this a flex column container -->
+  <div class="menu-content">
+    <div class="menu-header">
+      <a href="/" class="offscreen-logo">Emma Cheriegate</a>
+      <button class="close-menu" id="closeMenu">&times;</button>
     </div>
-  </nav>
+
+    <!-- Links go here -->
+    <div class="menu-links-wrapper">
+      <ul>
+        <li><a href="/#projects">PROJECTS</a></li>
+        <li><a href="https://drive.google.com/..." target="_blank">RESUME</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+      </ul>
+    </div>
+
+    <!-- Footer should be INSIDE .menu-content and below everything else -->
+    <div class="footer-icons">
+      <a href="https://x.com/eacheriegate" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/eacheriegate" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/eacheriegate" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</div>
+ 
+ <!-- Main Nav Bar -->
+ <nav class="navbar">
+   <div class="nav-container">
+     <a href="/" class="nav-logo">Emma Cheriegate</a>
+ 
+     <!-- Hamburger Icon -->
+     <div class="ham-menu" id="hamMenu">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+ 
+     <!-- Desktop Links -->
+     <div class="nav-links desktop-only">
+       <a href="/#projects">PROJECTS</a>
+       <a href="https://drive.google.com/..." target="_blank">RESUME</a>
+       <a href="/about.html">ABOUT</a>
+     </div>
+   </div>
+ </nav>
 
   <!-- Hero Section -->
   <section class="project-hero-image" style="background-image: url('/Images/ag_wetlands.jpg');">
@@ -96,6 +137,8 @@
     </div>
   </section>
   
+  <script src="/js/menu.js"></script>
+
   <!-- Lightbox Script -->
   <script>
     const lightbox = document.getElementById('lightbox');
