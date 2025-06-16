@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ghost Forest Dynamics | Emma Cheriegate</title>
+  <title>PM2.5 Across California Metros | Emma Cheriegate</title>
   <link rel="stylesheet" href="/css/style.css?v=2">
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
 </head>
-<body class="dark-nav">
+<body>
 <!-- Mobile Slide-In Menu -->
 <div class="off-screen-menu" id="mobileMenu">
   <div class="menu-content">
@@ -60,77 +60,81 @@
   </div>
 </nav>
 
-  <!-- Hero -->
-  <section class="project-hero-image" style="background-image: url('/Images/ghost_forests_img.jpg');">
-    <div class="hero-overlay">
-      <h1>Ghost Forest Dynamics in Coastal Georgia</h1>
-      <p>Tracking 34 years of ecological shifts from saltwater intrusion, sea level rise, and groundwater change—now being expanded into a full-length research publication.</p>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="project-hero-image" style="background-image: url('/Images/la-smog.jpg');">
+  <div class="hero-overlay">
+    <h1>Invisible Air: PM2.5 in California Metros</h1>
+    <p>Mapping fine-scale disparities in PM2.5 pollution across the Bay Area, Los Angeles, and San Diego metro areas.</p>
+  </div>
+</section>
 
-  <!-- Background -->
-  <section class="section project-content bg-1">
-    <div class="content-narrow">
-        <h2>Background</h2>
-        <p>Coastal freshwater forested wetlands (CFFWs) along the southeastern U.S. are rapidly transforming under the compounded effects of sea level rise, saltwater intrusion, and groundwater decline. These changes have led to the emergence of “ghost forests”—transitional zones of dead or degraded vegetation.</p>
-        <p>During my time in NASA-JPL’s DEVELOP program, I led a team investigating the long-term vegetation dynamics and environmental drivers of forest decline in the Savannah River watershed. Using 34 years of Landsat satellite data, seasonal vegetation indices (NDVI, EVI), and site-level environmental datasets (e.g., sea level, salinity, groundwater depth), we tracked vegetation stress and land cover change from 1990 to 2024.</p>
-        <p>This project integrates remote sensing and in situ environmental data to better understand climate-driven degradation of coastal ecosystems. I’m currently leading a first-author manuscript based on this project’s findings.</p>        
-    </div>
-  </section>
+<!-- Background Section -->
+<section class="section project-content bg-1">
+  <div class="content-narrow">
+    <h2>Background</h2>
+    <p>Urban air pollution remains one of the most pressing environmental justice concerns in California. PM2.5—particulate matter smaller than 2.5 microns—can deeply penetrate the lungs and bloodstream, exacerbating respiratory and cardiovascular issues. This project compares regional concentrations of PM2.5 across three major metropolitan areas to explore how air quality relates to urban infrastructure, geography, and spatial inequality.</p>
+  </div>
+</section>
 
-  <!-- Analyses -->
-  <section class="section project-content bg-2">
-    <div class="content-narrow">
-      <h2>Analyses</h2>
-      <div class="features-grid">
-        <div class="feature-box">
-          <h3>🌿 NDVI Time Series</h3>
-          <p>Assessed long-term vegetation health using Landsat and PlanetScope imagery.</p>
-        </div>
-        <div class="feature-box">
-          <h3>🧠 Sensor Evaluation</h3>
-          <p>Compared NDVI sensitivity across Landsat 7 ETM+, 8 OLI, and RapidEye/Dove sensors.</p>
-        </div>
-        <div class="feature-box">
-          <h3>🌎 Land Cover Classification</h3>
-          <p>Trained random forest models to detect class shifts in vegetation over time.</p>
-        </div>
-        <div class="feature-box">
-          <h3>💧 Porewater Salinity</h3>
-          <p>Analyzed in situ salinity trends alongside vegetative decline to validate SWI correlations.</p>
-        </div>
+<!-- Methodology Section -->
+<section class="section project-content bg-2">
+  <div class="content-narrow">
+    <h2>Data & Methodology</h2>
+    <div class="features-grid">
+      <div class="feature-box">
+        <h3>📊 PM2.5 Census Data</h3>
+        <p>Used CalEnviroScreen 4.0 to map census tract-level PM2.5 exposure across California metros.</p>
       </div>
-
+      <div class="feature-box">
+        <h3>🛣️ Road Network Overlay</h3>
+        <p>Clipped TIGER/Line road shapefiles to show infrastructure-adjacent pollution patterns.</p>
+      </div>
+      <div class="feature-box">
+        <h3>📉 Region-Tailored Classification Scales</h3>
+        <p>Used region-specific quantile binning to handle skewed PM2.5 distributions and ensure meaningful visual comparison across metros.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🐍 Python & GeoPandas</h3>
+        <p>Built a lightweight pipeline using Python, GeoPandas, and Matplotlib for preprocessing and map generation.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🖼️ Publication-Ready Exports</h3>
+        <p>Exported high-resolution PNGs and standalone legends for professional-quality visual outputs.</p>
+      </div>
+    </div>
       <!-- Resource Buttons -->
       <div class="links-container center">
-        <a href="https://drive.google.com/file/d/1Sy6YNSh1CDaoR2nrx63tdU6-jOF5l6gv/view" target="_blank">VIEW TECH PAPER</a>
-        <a href="https://drive.google.com/file/d/1yJn_IHqQJg2NRsMJKdjgyKJbdLLaWVAI/view" target="_blank">VIEW POSTER</a>
-        <a href="https://drive.google.com/file/d/1PPS4oeLEGO5sn_1W4vz3PLZcPHbMPXr7/view" target="_blank">WATCH PRESENTATION</a>
+        <a href="https://github.com/eacheriegate/california_pm2_5/tree/main" target="_blank">VIEW PROJECT & CODE</a>
       </div>
     </div>
   </section>
-<!-- Gallery Section -->
-<section class="section project-content bg-3">
-    <div class="content-narrow">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="/Images/coffee_hour_group.jpg" alt="Coffee Hour Presentation"
-               data-caption="Presenting at Penn State Geography’s Coffee Hour">
-        </div>
-        <div class="gallery-item">
-          <img src="/Images/SWI_GF_studysite.png" alt="Study Site Map"
-               data-caption="Study site boundary for SWI & ghost forest analysis">
-        </div>
-    </div>
 
+<!-- Map Gallery -->
+<section class="section project-content bg-3">
+  <div class="content-narrow">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/Images/pm2_5_grid_map.png" alt="California Metros PM2.5 Grid Map" data-caption="California Metros PM2.5 Grid Map. Note: Each region uses a localized PM2.5 scale to highlight intra-region variation. Values are not directly comparable across regions." />
+      </div>
+      <div class="gallery-item">
+        <img src="/Images/pm2_5_SF_final.png" alt="Bay Area PM2.5 Map" data-caption="Bay Area: High exposure in East Bay and inland zones." />
+      </div>
+      <div class="gallery-item">
+        <img src="/Images/pm2_5_LA_final.png" alt="Los Angeles PM2.5 Map" data-caption="Los Angeles: Dense clusters of high PM2.5 near freeway networks." />
+      </div>
+      <div class="gallery-item">
+        <img src="/Images/pm2_5_SD_final.png" alt="San Diego PM2.5 Map" data-caption="San Diego: Higher PM2.5 in southern and inland tracts." />
+      </div>
+    </div>
+  </div>
+</section>
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <img id="lightbox-img" src="" alt="">
     <p id="lightbox-caption"></p>
   </div>
-  </section>
 
   <!-- Footer -->
   <footer>
